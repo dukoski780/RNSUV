@@ -1,0 +1,9 @@
+footer {
+  background-color: var(--primary-dark);
+  color: var(--white);
+}
+
+footer p {
+  font-size: 0.9375rem;
+  opacity: 0.9;
+}

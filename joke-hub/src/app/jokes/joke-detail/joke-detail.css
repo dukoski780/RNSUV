@@ -1,0 +1,57 @@
+.joke-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.joke-author,
+.joke-date,
+.joke-category,
+.joke-views {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--text-dark);
+  font-size: 0.8rem;
+  opacity: 0.65;
+}
+
+.joke-author i,
+.joke-date i,
+.joke-category i,
+.joke-views i {
+  color: var(--primary-blue);
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.joke-punchline {
+  position: relative;
+  background-color: var(--light-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  border-left: 4px solid var(--accent-green);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .joke-punchline {
+    padding: 1.5rem;
+  }
+
+  .joke-author,
+  .joke-date,
+  .joke-category,
+  .joke-views {
+    font-size: 0.75rem;
+  }
+
+  .d-flex.flex-wrap.gap-2 {
+    flex-direction: column !important;
+  }
+
+  .d-flex.flex-wrap.gap-2 .btn {
+    width: 100% !important;
+  }
+}

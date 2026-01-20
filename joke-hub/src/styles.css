@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-dark: #152633;
+  --primary-blue: #0093AF;
+  --accent-green: #BFD730;
+  --white: #FFFFFF;
+  --light-bg: #F8F9FA;
+  --text-dark: #152633;
+  --text-light: #6C757D;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Bootstrap Overrides */
+.btn-primary {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: var(--white);
+  font-weight: 500;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #007a94;
+  border-color: #007a94;
+}
+
+.btn-success {
+  background-color: var(--accent-green);
+  border-color: var(--accent-green);
+  color: var(--primary-dark);
+  font-weight: 500;
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  background-color: #a8c028;
+  border-color: #a8c028;
+  color: var(--primary-dark);
+}
+
+.btn-dark {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: var(--white);
+  font-weight: 500;
+}
+
+.btn-dark:hover,
+.btn-dark:focus {
+  background-color: #0d1921;
+  border-color: #0d1921;
+}
+
+/* Card styling */
+.card {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Badge styling */
+.badge {
+  font-weight: 500;
+  padding: 0.5em 0.8em;
+}
+
+.badge.bg-primary {
+  background-color: var(--primary-blue) !important;
+}
+
+.badge.bg-success {
+  background-color: var(--accent-green) !important;
+  color: var(--primary-dark) !important;
+}
+
+.badge.bg-dark {
+  background-color: var(--primary-dark) !important;
+}
+
+/* Form control styling */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 0.25rem rgba(0, 147, 175, 0.25);
+}
+
+a {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #007a94;
+  text-decoration: underline;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.alert-success {
+  background-color: rgba(191, 215, 48, 0.15);
+  border-color: var(--accent-green);
+  color: var(--primary-dark);
+}
+
+.alert-danger {
+  background-color: rgba(220, 53, 69, 0.15);
+  border-color: #dc3545;
+  color: #842029;
+}
+
+.alert-info {
+  background-color: rgba(0, 147, 175, 0.15);
+  border-color: var(--primary-blue);
+  color: var(--primary-dark);
+}

@@ -1,0 +1,86 @@
+<div class="min-vh-100 d-flex align-items-center justify-content-center p-3">
+  <div class="card shadow rounded-3 p-4" style="width: 100%; max-width: 600px;">
+    <div class="text-center mb-4">
+      <h2 class="fw-semibold mb-2">
+        <span style="color: var(--primary-blue);">Edit</span> <span style="color: var(--accent-green);">Joke</span>
+      </h2>
+      <p class="text-muted mb-0">Update your joke details</p>
+    </div>
+
+    <div *ngIf="isLoading" class="text-center py-5">
+      <div class="spinner-border" style="color: var(--primary-blue);" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p class="text-muted mt-3">Loading joke...</p>
+    </div>
+
+    <form #jokeForm="ngForm" (ngSubmit)="jokeForm.form.valid && updateJoke()" *ngIf="!isLoading">
+      <div class="mb-3">
+        <label for="jokeType" class="form-label fw-medium">Joke Type</label>
+        <select
+          id="jokeType"
+          name="jokeType"
+          class="form-control"
+          [(ngModel)]="jokeType"
+          #typeField="ngModel"
+          [class.is-invalid]="typeField.invalid && typeField.touched"
+          required>
+          <option value="" disabled selected>Select a type</option>
+          <option *ngFor="let type of jokeTypes" [value]="type" class="text-capitalize">{{ type }}</option>
+        </select>
+        <div class="invalid-feedback" *ngIf="typeField.invalid && typeField.touched">
+          Joke type is required
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="setup" class="form-label fw-medium">Setup</label>
+        <textarea
+          id="setup"
+          name="setup"
+          class="form-control"
+          [(ngModel)]="setup"
+          #setupField="ngModel"
+          [class.is-invalid]="setupField.invalid && setupField.touched"
+          placeholder="Enter the joke setup..."
+          rows="3"
+          required
+          minlength="10"></textarea>
+        <div class="invalid-feedback" *ngIf="setupField.invalid && setupField.touched">
+          <span *ngIf="setupField.errors?.['required']">Setup is required</span>
+          <span *ngIf="setupField.errors?.['minlength']">Setup must be at least 10 characters</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="punchline" class="form-label fw-medium">Punchline</label>
+        <textarea
+          id="punchline"
+          name="punchline"
+          class="form-control"
+          [(ngModel)]="punchline"
+          #punchlineField="ngModel"
+          [class.is-invalid]="punchlineField.invalid && punchlineField.touched"
+          placeholder="Enter the punchline..."
+          rows="3"
+          required
+          minlength="5"></textarea>
+        <div class="invalid-feedback" *ngIf="punchlineField.invalid && punchlineField.touched">
+          <span *ngIf="punchlineField.errors?.['required']">Punchline is required</span>
+          <span *ngIf="punchlineField.errors?.['minlength']">Punchline must be at least 5 characters</span>
+        </div>
+      </div>
+
+      <div *ngIf="message" [ngClass]="{'alert': true, 'alert-danger': isError, 'alert-success': !isError, 'mb-3': true}">
+        {{ message }}
+      </div>
+
+      <div class="d-flex gap-3 mt-4">
+        <a routerLink="/jokes/list" class="btn btn-outline-secondary flex-fill">Cancel</a>
+        <button type="submit" class="btn btn-primary flex-fill" [disabled]="!jokeForm.form.valid">
+          <i class="bi bi-check-circle"></i> Update Joke
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

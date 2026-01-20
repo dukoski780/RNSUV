@@ -1,0 +1,50 @@
+<div class="joke-card" (click)="toggleExpand()">
+  <div class="joke-header">
+    <div class="joke-title-row">
+      <div class="joke-info">
+        <h3 class="joke-setup">{{ joke.setup }}</h3>
+        <div class="joke-meta">
+          <span class="joke-author">
+            <i class="fa fa-user"></i>{{ joke.author }}
+          </span>
+          <span class="joke-date">
+            <i class="fa fa-clock-o"></i>{{ joke.createdAt | date:'dd/MM/yyyy' }}
+          </span>
+          <span class="joke-category">
+            <i class="fa fa-folder"></i>{{ joke.type }}
+          </span>
+          <span class="joke-views">
+            <i class="fa fa-eye"></i>{{ joke.views || 0 }}
+          </span>
+        </div>
+      </div>
+      <div class="expand-icon">
+        <i class="bi" [ngClass]="isExpanded ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="joke-punchline" *ngIf="isExpanded">
+    <div class="punchline-content">
+      <p>{{ joke.punchline }}</p>
+      <span class="joke-emoji">😄</span>
+    </div>
+  </div>
+
+  <div class="joke-actions" *ngIf="isExpanded && userStore.isLoggedIn()">
+    <button
+      class="btn btn-sm btn-outline-primary"
+      (click)="onToggleFavorite($event)">
+      <i class="bi" [ngClass]="joke.favorite ? 'bi-star-fill' : 'bi-star'"></i>
+    </button>
+    <a *ngIf="canEdit()" [routerLink]="['/jokes/edit', joke.id]" class="btn btn-sm btn-outline-secondary" (click)="$event.stopPropagation()">
+      <i class="bi bi-pencil"></i>
+    </a>
+    <button *ngIf="userStore.isAdmin()" class="btn btn-sm btn-outline-danger" (click)="onDeleteJoke($event)">
+      <i class="bi bi-trash"></i>
+    </button>
+    <a [routerLink]="['/jokes/detail', joke.id]" class="btn btn-sm btn-outline-primary" (click)="$event.stopPropagation()">
+      <i class="bi bi-eye"></i>
+    </a>
+  </div>
+</div>

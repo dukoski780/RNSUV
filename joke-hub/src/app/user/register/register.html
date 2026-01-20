@@ -1,0 +1,84 @@
+<div class="min-vh-100 d-flex align-items-center justify-content-center p-3">
+  <div class="card shadow rounded-3 p-4" style="width: 100%; max-width: 450px;">
+    <div class="text-center mb-4">
+      <h2 class="fw-semibold mb-2">
+        <span style="color: var(--primary-blue);">Create</span> <span style="color: var(--accent-green);">Account</span>
+      </h2>
+      <p class="text-muted mb-0">Join JokeHub today</p>
+    </div>
+
+    <form #registerForm="ngForm" (ngSubmit)="registerForm.form.valid && register()">
+      <div class="mb-3">
+        <label for="username" class="form-label fw-medium">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          name="username"
+          [(ngModel)]="username"
+          #usernameField="ngModel"
+          [class.is-invalid]="usernameField.invalid && usernameField.touched"
+          placeholder="Choose a username"
+          required
+          minlength="3">
+        <div class="invalid-feedback" *ngIf="usernameField.invalid && usernameField.touched">
+          <span *ngIf="usernameField.errors?.['required']">Username is required</span>
+          <span *ngIf="usernameField.errors?.['minlength']">Username must be at least 3 characters</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label fw-medium">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+          #passwordField="ngModel"
+          [class.is-invalid]="passwordField.invalid && passwordField.touched"
+          placeholder="Create a password"
+          required
+          minlength="4">
+        <div class="invalid-feedback" *ngIf="passwordField.invalid && passwordField.touched">
+          <span *ngIf="passwordField.errors?.['required']">Password is required</span>
+          <span *ngIf="passwordField.errors?.['minlength']">Password must be at least 4 characters</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label fw-medium">Confirm Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="confirmPassword"
+          name="confirmPassword"
+          [(ngModel)]="confirmPassword"
+          #confirmPasswordField="ngModel"
+          [class.is-invalid]="confirmPasswordField.invalid && confirmPasswordField.touched || (password !== confirmPassword && confirmPassword)"
+          placeholder="Confirm your password"
+          required>
+        <div class="invalid-feedback" *ngIf="confirmPasswordField.invalid && confirmPasswordField.touched">
+          Confirm password is required
+        </div>
+        <div class="invalid-feedback" *ngIf="password && confirmPassword && password !== confirmPassword && confirmPasswordField.touched">
+          Passwords do not match
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100 mb-3"
+              [disabled]="!registerForm.form.valid || (password !== confirmPassword && confirmPassword)">
+        Register
+      </button>
+
+      <div *ngIf="message" [ngClass]="{'alert': true, 'alert-danger': isError, 'alert-success': !isError, 'mb-3': true}">
+        {{ message }}
+      </div>
+
+      <div class="text-center">
+        <span class="text-muted small">Already have an account? </span>
+        <a routerLink="/login" class="fw-semibold small">Log in</a>
+      </div>
+    </form>
+  </div>
+</div>

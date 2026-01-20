@@ -1,0 +1,71 @@
+<div class="min-vh-100 d-flex align-items-center justify-content-center p-3">
+  <div class="card shadow rounded-3 p-4" style="width: 100%; max-width: 450px;">
+    <div class="text-center mb-4">
+      <h2 class="fw-semibold mb-2">
+        <span style="color: var(--primary-blue);">Joke</span><span style="color: var(--accent-green);">Hub</span>
+      </h2>
+      <p class="text-muted mb-0">Log in to your account</p>
+    </div>
+
+    <form #loginForm="ngForm" (ngSubmit)="loginForm.form.valid && login()">
+      <div class="mb-3">
+        <label for="username" class="form-label fw-medium">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          name="username"
+          [(ngModel)]="username"
+          #usernameField="ngModel"
+          [class.is-invalid]="usernameField.invalid && usernameField.touched"
+          placeholder="Enter your username"
+          required>
+        <div class="invalid-feedback" *ngIf="usernameField.invalid && usernameField.touched">
+          Username is required
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label fw-medium">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+          #passwordField="ngModel"
+          [class.is-invalid]="passwordField.invalid && passwordField.touched"
+          placeholder="Enter your password"
+          required
+          minlength="4">
+        <div class="invalid-feedback" *ngIf="passwordField.invalid && passwordField.touched">
+          <span *ngIf="passwordField.errors?.['required']">Password is required</span>
+          <span *ngIf="passwordField.errors?.['minlength']">Password must be at least 4 characters</span>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100 mb-3" [disabled]="!loginForm.form.valid">
+        Log In
+      </button>
+
+      <div *ngIf="message" [ngClass]="{'alert': true, 'alert-danger': isError, 'alert-success': !isError, 'mb-3': true}">
+        {{ message }}
+      </div>
+
+      <div class="text-center">
+        <span class="text-muted small">Don't have an account? </span>
+        <a routerLink="/register" class="fw-semibold small">Sign up</a>
+      </div>
+    </form>
+
+    <div class="mt-4 pt-3 border-top text-center">
+      <p class="fw-semibold small mb-2">Demo Credentials:</p>
+      <div class="text-muted small mb-1">
+        <strong>Admin:</strong> admin / admin123
+      </div>
+      <div class="text-muted small">
+        <strong>User:</strong> user1 / pass123
+      </div>
+    </div>
+  </div>
+</div>

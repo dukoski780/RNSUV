@@ -1,0 +1,682 @@
+[
+  {
+    "id": 1,
+    "type": "programming",
+    "setup": "Why do programmers prefer dark mode?",
+    "punchline": "Because light attracts bugs!!",
+    "author": "admin",
+    "favorite": true,
+    "createdAt": "2025-01-10T10:00:00Z",
+    "views": 33
+  },
+  {
+    "id": 2,
+    "type": "general",
+    "setup": "What do you call a bear with no teeth",
+    "punchline": "A gummy bear!",
+    "author": "user1",
+    "favorite": true,
+    "createdAt": "2025-01-10T11:00:00Z",
+    "views": 0
+  },
+  {
+    "id": 3,
+    "type": "programming",
+    "setup": "How many programmers does it take to change a light bulb?",
+    "punchline": "None. It's a hardware problem!",
+    "author": "admin",
+    "favorite": false,
+    "createdAt": "2025-01-10T12:00:00Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "What did one snowman say to the other snow man?",
+    "punchline": "Do you smell carrot?",
+    "author": "admin",
+    "id": 4,
+    "favorite": true,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 1
+  },
+  {
+    "type": "general",
+    "setup": "Why can't your nose be 12 inches long?",
+    "punchline": "Because then it'd be a foot!",
+    "author": "admin",
+    "id": 5,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "Why did the math book look sad?",
+    "punchline": "Because it had too many problems.",
+    "author": "admin",
+    "id": 6,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "How good are you at Power Point?",
+    "punchline": "I Excel at it.",
+    "author": "admin",
+    "id": 7,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "dad",
+    "setup": "Why do fathers take an extra pair of socks when they go golfing?",
+    "punchline": "In case they get a hole in one!",
+    "author": "admin",
+    "id": 8,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "programming",
+    "setup": "Which song would an exception sing?",
+    "punchline": "Can't catch me - Avicii",
+    "author": "admin",
+    "id": 9,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "Why did the cookie cry?",
+    "punchline": "Because his mother was a wafer so long",
+    "author": "admin",
+    "id": 10,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "I couldn't get a reservation at the library...",
+    "punchline": "They were fully booked.",
+    "author": "admin",
+    "id": 11,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "Why is seven bigger than nine?",
+    "punchline": "Because seven ate nine.",
+    "author": "admin",
+    "id": 12,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "Can February march?",
+    "punchline": "No, but April may.",
+    "author": "admin",
+    "id": 13,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "What do you call sad coffee?",
+    "punchline": "Despresso.",
+    "author": "admin",
+    "id": 14,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "Did you hear about the submarine industry?",
+    "punchline": "It really took a dive...",
+    "author": "admin",
+    "id": 15,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "programming",
+    "setup": "A DHCP packet walks into a bar and asks for a beer.",
+    "punchline": "Bartender says, \"here, but I’ll need that back in an hour!\"",
+    "author": "admin",
+    "id": 16,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "Do you know what the word 'was' was initially?",
+    "punchline": "Before was was was was was is.",
+    "author": "admin",
+    "id": 17,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "What does an angry pepper do?",
+    "punchline": "It gets jalapeño face.",
+    "author": "admin",
+    "id": 18,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "programming",
+    "setup": "Why did the functions stop calling each other?",
+    "punchline": "Because they had constant arguments.",
+    "author": "admin",
+    "id": 19,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "What's brown and sticky?",
+    "punchline": "A stick.",
+    "author": "admin",
+    "id": 20,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "What kind of dinosaur loves to sleep?",
+    "punchline": "A stega-snore-us.",
+    "author": "admin",
+    "id": 21,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "How did the hipster burn the roof of his mouth?",
+    "punchline": "He ate the pizza before it was cool.",
+    "author": "admin",
+    "id": 22,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "Hey, dad, did you get a haircut?",
+    "punchline": "No, I got them all cut.",
+    "author": "admin",
+    "id": 23,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "What's black and white and read all over?",
+    "punchline": "The newspaper.",
+    "author": "admin",
+    "id": 24,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "What did the Zen Buddist say to the hotdog vendor?",
+    "punchline": "Make me one with everything.",
+    "author": "admin",
+    "id": 25,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "Why can't you use \"Beef stew\"as a password?",
+    "punchline": "Because it's not stroganoff.",
+    "author": "admin",
+    "id": 26,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "What musical instrument is found in the bathroom?",
+    "punchline": "A tuba toothpaste.",
+    "author": "admin",
+    "id": 27,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "How do the trees get on the internet?",
+    "punchline": "They log on.",
+    "author": "admin",
+    "id": 28,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "knock-knock",
+    "setup": "Knock knock. \n Who's there? \n Little old lady. \n Little old lady who?",
+    "punchline": "I didn't know you could yodel!",
+    "author": "admin",
+    "id": 29,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "How do you fix a damaged jack-o-lantern?",
+    "punchline": "You use a pumpkin patch.",
+    "author": "admin",
+    "id": 30,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "How do hens stay fit?",
+    "punchline": "They always egg-cercise!",
+    "author": "admin",
+    "id": 31,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "Why couldn't the kid see the pirate movie?",
+    "punchline": "Because it was rated arrr!",
+    "author": "admin",
+    "id": 32,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "99.9% of the people are dumb!",
+    "punchline": "Fortunately I belong to the remaining 1%",
+    "author": "admin",
+    "id": 33,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "programming",
+    "setup": "Why did the programmer's wife leave him?",
+    "punchline": "He didn't know how to commit.",
+    "author": "admin",
+    "id": 34,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "What did Romans use to cut pizza before the rolling cutter was invented?",
+    "punchline": "Lil Caesars",
+    "author": "admin",
+    "id": 35,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "Where was the Declaration of Independence signed?",
+    "punchline": "At the bottom! ",
+    "author": "admin",
+    "id": 36,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "Why do crabs never give to charity?",
+    "punchline": "Because they’re shellfish.",
+    "author": "admin",
+    "id": 37,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "Why can't a bicycle stand on its own?",
+    "punchline": "It's two-tired.",
+    "author": "admin",
+    "id": 38,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "programming",
+    "setup": "How many React developers does it take to change a lightbulb?",
+    "punchline": "None, they prefer dark mode.",
+    "author": "admin",
+    "id": 39,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "I dropped a pear in my car this morning.",
+    "punchline": "You should drop another one, then you would have a pair.",
+    "author": "admin",
+    "id": 40,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "programming",
+    "setup": "What goes after USA?",
+    "punchline": "USB.",
+    "author": "admin",
+    "id": 41,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "How many lips does a flower have?",
+    "punchline": "Tulips",
+    "author": "admin",
+    "id": 42,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "How does a French skeleton say hello?",
+    "punchline": "Bone-jour.",
+    "author": "admin",
+    "id": 43,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "What do you call a droid that takes the long way around?",
+    "punchline": "R2 detour.",
+    "author": "admin",
+    "id": 44,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "I bought some shoes from a drug dealer.",
+    "punchline": "I don't know what he laced them with, but I was tripping all day!",
+    "author": "admin",
+    "id": 45,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "What did the left eye say to the right eye?",
+    "punchline": "Between us, something smells!",
+    "author": "admin",
+    "id": 46,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "Why did the golfer bring two pairs of pants?",
+    "punchline": "In case he got a hole in one.",
+    "author": "admin",
+    "id": 47,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "programming",
+    "setup": "Why do programmers prefer dark chocolate?",
+    "punchline": "Because it's bitter like their code.",
+    "author": "admin",
+    "id": 48,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "programming",
+    "setup": "A user interface is like a joke.",
+    "punchline": "If you have to explain it then it is not that good.",
+    "author": "admin",
+    "id": 49,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "What do you call two barracuda fish?",
+    "punchline": "A Pairacuda!",
+    "author": "admin",
+    "id": 50,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "What do you call a sheep with no legs?",
+    "punchline": "A cloud.",
+    "author": "admin",
+    "id": 51,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "programming",
+    "setup": "Why did the developer go broke buying Bitcoin?",
+    "punchline": "He kept calling it bytecoin and didn't get any.",
+    "author": "admin",
+    "id": 52,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "Why did the rooster cross the road?",
+    "punchline": "He heard that the chickens at KFC were pretty hot.",
+    "author": "admin",
+    "id": 53,
+    "favorite": false,
+    "createdAt": "2025-12-25T08:58:05.138Z",
+    "views": 0
+  },
+  {
+    "type": "general",
+    "setup": "TESTTESTTEST",
+    "punchline": "TESTTESTTEST",
+    "author": "admin",
+    "id": 54,
+    "favorite": false,
+    "views": 0,
+    "createdAt": "2025-12-25T12:25:06.012Z"
+  },
+  {
+    "type": "programming",
+    "setup": "Progamirng joke",
+    "punchline": "Progamirng joke",
+    "author": "admin",
+    "id": 55,
+    "favorite": false,
+    "views": 2,
+    "createdAt": "2025-12-25T12:26:58.484Z"
+  },
+  {
+    "id": 57,
+    "type": "general",
+    "setup": "Why does Norway have barcodes on their battleships?",
+    "punchline": "So when they get back to port, they can Scandinavian.",
+    "author": "admin",
+    "favorite": false,
+    "views": 0,
+    "createdAt": "2025-12-25T13:05:35.400Z"
+  },
+  {
+    "id": 58,
+    "type": "general",
+    "setup": "Why did the scarecrow win an award?",
+    "punchline": "Because he was outstanding in his field.",
+    "author": "admin",
+    "favorite": false,
+    "views": 0,
+    "createdAt": "2025-12-25T13:05:35.400Z"
+  },
+  {
+    "id": 59,
+    "type": "general",
+    "setup": "What does a clock do when it's hungry?",
+    "punchline": "It goes back four seconds!",
+    "author": "admin",
+    "favorite": false,
+    "views": 0,
+    "createdAt": "2025-12-25T13:05:35.400Z"
+  },
+  {
+    "id": 60,
+    "type": "knock-knock",
+    "setup": "Knock knock. \n Who's there? \n Cows go. \n Cows go who?",
+    "punchline": "No, cows go moo.",
+    "author": "admin",
+    "favorite": false,
+    "views": 0,
+    "createdAt": "2025-12-25T13:05:35.400Z"
+  },
+  {
+    "id": 61,
+    "type": "programming",
+    "setup": "Why dot net developers don't wear glasses?",
+    "punchline": "Because they see sharp.",
+    "author": "admin",
+    "favorite": false,
+    "views": 0,
+    "createdAt": "2025-12-25T13:05:35.400Z"
+  },
+  {
+    "id": 62,
+    "type": "programming",
+    "setup": "Why did the developer quit his job?",
+    "punchline": "Because he didn't get arrays.",
+    "author": "admin",
+    "favorite": false,
+    "views": 0,
+    "createdAt": "2025-12-25T13:06:34.742Z"
+  },
+  {
+    "id": 63,
+    "type": "programming",
+    "setup": "Why did the programmer go broke?",
+    "punchline": "He used up all his cache",
+    "author": "admin",
+    "favorite": false,
+    "views": 1,
+    "createdAt": "2025-12-25T13:06:34.742Z"
+  },
+  {
+    "id": 64,
+    "type": "programming",
+    "setup": "What's the best thing about a Boolean?",
+    "punchline": "Even if you're wrong, you're only off by a bit.",
+    "author": "admin",
+    "favorite": false,
+    "views": 0,
+    "createdAt": "2025-12-25T13:06:34.742Z"
+  },
+  {
+    "id": 65,
+    "type": "programming",
+    "setup": "Why did the programmer's wife leave him?",
+    "punchline": "He didn't know how to commit.",
+    "author": "admin",
+    "favorite": false,
+    "views": 1,
+    "createdAt": "2025-12-25T13:06:34.742Z"
+  },
+  {
+    "id": 66,
+    "type": "programming",
+    "setup": "Why did the programmer always mix up Halloween and Christmas?",
+    "punchline": "Because Oct 31 equals Dec 25.",
+    "author": "admin",
+    "favorite": false,
+    "views": 0,
+    "createdAt": "2025-12-25T13:06:34.742Z"
+  },
+  {
+    "type": "general",
+    "setup": "Share your humor with the community\n",
+    "punchline": "Share your humor with the community",
+    "author": "user1",
+    "id": 67,
+    "favorite": false,
+    "views": 10,
+    "createdAt": "2025-12-25T13:11:02.307Z"
+  },
+  {
+    "type": "programming",
+    "setup": "What's the best thing about a Boolean?",
+    "punchline": "Even if you're wrong, you're only off by a bit.",
+    "author": "test",
+    "id": 68,
+    "favorite": false,
+    "views": 0,
+    "createdAt": "2025-12-25T19:00:43.023Z"
+  },
+  {
+    "type": "general",
+    "setup": "testtesttesttesttest",
+    "punchline": "testtesttest",
+    "author": "user1",
+    "id": 69,
+    "favorite": false,
+    "views": 0,
+    "createdAt": "2026-01-20T19:53:44.779Z"
+  }
+]

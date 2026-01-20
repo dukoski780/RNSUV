@@ -1,0 +1,81 @@
+<header class="navbar navbar-light bg-white py-3 shadow-sm">
+  <div class="container-xxl d-flex justify-content-between align-items-center px-3">
+    <div class="d-flex align-items-center">
+      <a routerLink="/jokes/list" class="fs-4 fw-bold me-3 text-decoration-none">
+        <span style="color: var(--primary-blue);">Joke</span><span style="color: var(--accent-green);">Hub</span>
+      </a>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="d-none d-md-flex gap-2 align-items-center">
+      <a *ngIf="userStore.isLoggedIn()" routerLink="/jokes/create" routerLinkActive="active" class="nav-link-custom">Add Joke</a>
+      <a *ngIf="userStore.isAdmin()" routerLink="/admin/import" routerLinkActive="active" class="nav-link-custom">Import</a>
+      <a *ngIf="userStore.isLoggedIn()" routerLink="/my-account" routerLinkActive="active" class="nav-link-custom">My Account</a>
+
+      <!-- Not Logged In -->
+      <div *ngIf="!userStore.isLoggedIn()">
+        <a routerLink="/login" class="btn btn-outline-primary btn-sm">Login</a>
+      </div>
+
+      <!-- Logged In -->
+      <div *ngIf="userStore.isLoggedIn()" class="d-flex align-items-center ms-3">
+        <span class="fw-medium">{{ userStore.username }}</span>
+        <span class="badge ms-2" style="background-color: var(--accent-green); color: var(--primary-dark);" *ngIf="userStore.isAdmin()">ADMIN</span>
+      </div>
+      <button *ngIf="userStore.isLoggedIn()" class="btn btn-outline-primary btn-sm ms-2" (click)="logout()">Logout</button>
+    </div>
+
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger d-md-none" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Slide-in Menu -->
+  <div class="mobile-menu" [class.open]="isMenuOpen">
+    <div class="p-4">
+      <!-- Logged In User Info -->
+      <div *ngIf="userStore.isLoggedIn()" class="text-center pb-3 mb-3 border-bottom">
+        <div class="user-avatar">{{ getUserInitials() }}</div>
+        <div class="fs-5 fw-semibold mb-2">{{ userStore.username }}</div>
+        <span class="badge" style="background-color: var(--accent-green); color: var(--primary-dark);" *ngIf="userStore.isAdmin()">ADMIN</span>
+      </div>
+
+      <!-- Not Logged In Info -->
+      <div *ngIf="!userStore.isLoggedIn()" class="text-center pb-3 mb-3 border-bottom">
+        <div class="user-avatar">
+          <i class="bi bi-person"></i>
+        </div>
+        <div class="fs-5 fw-semibold">Guest</div>
+      </div>
+
+      <div class="mobile-menu-links">
+        <a routerLink="/jokes/list" routerLinkActive="active" class="mobile-menu-link" (click)="closeMenu()">
+          <i class="bi bi-emoji-smile"></i> Jokes
+        </a>
+        <a *ngIf="userStore.isLoggedIn()" routerLink="/jokes/create" routerLinkActive="active" class="mobile-menu-link" (click)="closeMenu()">
+          <i class="bi bi-plus-circle"></i> Add Joke
+        </a>
+        <a *ngIf="userStore.isAdmin()" routerLink="/admin/import" routerLinkActive="active" class="mobile-menu-link" (click)="closeMenu()">
+          <i class="bi bi-download"></i> Import Jokes
+        </a>
+        <a *ngIf="userStore.isLoggedIn()" routerLink="/my-account" routerLinkActive="active" class="mobile-menu-link" (click)="closeMenu()">
+          <i class="bi bi-person-circle"></i> My Account
+        </a>
+      </div>
+
+      <!-- Login/Logout Button -->
+      <a *ngIf="!userStore.isLoggedIn()" routerLink="/login" class="btn btn-primary w-100 mt-4" (click)="closeMenu()">
+        <i class="bi bi-box-arrow-in-right"></i> Login
+      </a>
+      <button *ngIf="userStore.isLoggedIn()" class="btn btn-outline-danger w-100 mt-4" (click)="logout()">
+        <i class="bi bi-box-arrow-right"></i> Logout
+      </button>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="menu-overlay" [class.show]="isMenuOpen" (click)="closeMenu()"></div>
+</header>

@@ -1,0 +1,126 @@
+<div class="container py-5" style="max-width: 900px;">
+  <div class="card shadow rounded-3 p-4">
+    <div class="text-center mb-4">
+      <h2 class="fw-semibold mb-2">
+        <span style="color: var(--primary-blue);">Import</span> <span style="color: var(--accent-green);">Jokes</span>
+      </h2>
+      <p class="text-muted mb-0">Import jokes from <a href="https://github.com/15Dkatz/official_joke_api" target="_blank" style="color: var(--primary-blue); text-decoration: underline;">Official Joke API</a></p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mb-4">
+      <div class="col">
+        <div class="import-option-card">
+          <div class="option-icon" style="background: linear-gradient(135deg, var(--primary-blue), rgba(0, 147, 175, 0.7));">
+            <i class="bi bi-shuffle"></i>
+          </div>
+          <h4 class="fw-semibold fs-5 mb-2">Random Jokes</h4>
+          <p class="text-muted small mb-3">Import random jokes from various categories</p>
+          <div class="d-flex gap-2 justify-content-center">
+          <button
+            (click)="importRandomJokes(5)"
+            [disabled]="isLoading"
+            class="btn btn-primary btn-sm">
+            <i class="bi bi-download"></i> Import 5
+          </button>
+          <button
+            (click)="importRandomJokes(50)"
+            [disabled]="isLoading"
+            class="btn btn-primary btn-sm">
+            <i class="bi bi-download"></i> Import 50
+          </button>
+        </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="import-option-card">
+          <div class="option-icon" style="background: linear-gradient(135deg, var(--accent-green), rgba(191, 215, 48, 0.7));">
+            <i class="bi bi-code-slash"></i>
+          </div>
+          <h4 class="fw-semibold fs-5 mb-2">Programming Jokes</h4>
+          <p class="text-muted small mb-3">Import programming-specific jokes for developers</p>
+          <div class="d-flex gap-2 justify-content-center">
+          <button
+            (click)="importJokesByCategory('programming', 5)"
+            [disabled]="isLoading"
+            class="btn btn-success btn-sm">
+            <i class="bi bi-download"></i> Import 5
+          </button>
+          <button
+            (click)="importJokesByCategory('programming', 10)"
+            [disabled]="isLoading"
+            class="btn btn-success btn-sm">
+            <i class="bi bi-download"></i> Import 10
+          </button>
+        </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="import-option-card">
+          <div class="option-icon" style="background: linear-gradient(135deg, #ff6b6b, rgba(255, 107, 107, 0.7));">
+            <i class="bi bi-chat-dots"></i>
+          </div>
+          <h4 class="fw-semibold fs-5 mb-2">General Jokes</h4>
+          <p class="text-muted small mb-3">Import general jokes for everyone</p>
+          <div class="d-flex gap-2 justify-content-center">
+          <button
+            (click)="importJokesByCategory('general', 5)"
+            [disabled]="isLoading"
+            class="btn btn-danger btn-sm">
+            <i class="bi bi-download"></i> Import 5
+          </button>
+          <button
+            (click)="importJokesByCategory('general', 10)"
+            [disabled]="isLoading"
+            class="btn btn-danger btn-sm">
+            <i class="bi bi-download"></i> Import 10
+          </button>
+        </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="import-option-card">
+          <div class="option-icon" style="background: linear-gradient(135deg, #f39c12, rgba(243, 156, 18, 0.7));">
+            <i class="bi bi-emoji-smile"></i>
+          </div>
+          <h4 class="fw-semibold fs-5 mb-2">Knock-Knock Jokes</h4>
+          <p class="text-muted small mb-3">Import classic knock-knock jokes</p>
+          <div class="d-flex gap-2 justify-content-center">
+          <button
+            (click)="importJokesByCategory('knock-knock', 5)"
+            [disabled]="isLoading"
+            class="btn btn-warning btn-sm">
+            <i class="bi bi-download"></i> Import 5
+          </button>
+          <button
+            (click)="importJokesByCategory('knock-knock', 10)"
+            [disabled]="isLoading"
+            class="btn btn-warning btn-sm">
+            <i class="bi bi-download"></i> Import 10
+          </button>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="isLoading" class="text-center py-5">
+      <div class="spinner-border" style="color: var(--primary-blue);" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p class="text-muted mt-3">Importing jokes...</p>
+    </div>
+
+    <div *ngIf="message" [ngClass]="{'alert': true, 'alert-danger': isError, 'alert-success': !isError, 'mb-3': true}">
+      <i class="bi" [ngClass]="isError ? 'bi-exclamation-triangle' : 'bi-check-circle'"></i>
+      {{ message }}
+    </div>
+
+    <div class="pt-4 border-top mt-4">
+      <a routerLink="/jokes/list" class="btn btn-outline-secondary">
+        <i class="bi bi-arrow-left"></i> Back to Jokes
+      </a>
+    </div>
+  </div>
+</div>

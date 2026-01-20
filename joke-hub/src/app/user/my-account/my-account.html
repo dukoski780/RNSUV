@@ -1,0 +1,145 @@
+<div class="container py-5" style="max-width: 1200px;">
+  <h2 class="fw-semibold mb-4">My Account</h2>
+
+  <div class="row g-4">
+    <!-- Left Sidebar - Account Navigation -->
+    <aside class="col-md-3">
+      <div class="card shadow-sm">
+        <div class="list-group list-group-flush">
+          <a (click)="scrollToSection('dashboard')" class="list-group-item list-group-item-action" [class.active]="activeSection === 'dashboard'" style="cursor: pointer;">
+            <i class="bi bi-person-circle me-2"></i> Dashboard
+          </a>
+          <a (click)="scrollToSection('account-details')" class="list-group-item list-group-item-action" [class.active]="activeSection === 'account-details'" style="cursor: pointer;">
+            <i class="bi bi-person me-2"></i> Account Details
+          </a>
+          <a (click)="scrollToSection('change-password')" class="list-group-item list-group-item-action" [class.active]="activeSection === 'change-password'" style="cursor: pointer;">
+            <i class="bi bi-lock me-2"></i> Change Password
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="col-md-9">
+      <!-- Account Statistics -->
+      <div id="dashboard" class="row g-3 mb-4">
+        <div class="col-md-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-body d-flex align-items-center">
+              <div class="stat-icon me-3">
+                <i class="bi bi-chat-square-text"></i>
+              </div>
+              <div>
+                <h6 class="text-muted mb-1">My Jokes</h6>
+                <h3 class="mb-0">{{ totalJokes$ | async }}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-body d-flex align-items-center">
+              <div class="stat-icon me-3">
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <div>
+                <h6 class="text-muted mb-1">Favorites</h6>
+                <h3 class="mb-0">{{ favoriteJokes$ | async }}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Account Details Section -->
+      <div id="account-details" class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h4 class="fw-semibold mb-3">Account Details</h4>
+          <div class="row mb-3">
+            <div class="col-md-4 fw-medium text-muted">Username:</div>
+            <div class="col-md-8">{{ userStore.username }}</div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-4 fw-medium text-muted">Role:</div>
+            <div class="col-md-8">
+              <span class="badge" [ngClass]="userStore.isAdmin() ? 'bg-danger' : 'bg-primary'">
+                {{ userStore.role }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Change Password Section -->
+      <div id="change-password" class="card shadow-sm">
+        <div class="card-body">
+          <h4 class="fw-semibold mb-3">Change Password</h4>
+          <p class="text-muted small">Update your password to keep your account secure.</p>
+
+          <form #passwordForm="ngForm" (ngSubmit)="changePassword()">
+            <!-- Current Password -->
+            <div class="mb-3">
+              <label for="currentPassword" class="form-label fw-medium">Current Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="currentPassword"
+                name="currentPassword"
+                [(ngModel)]="currentPassword"
+                #currentPasswordField="ngModel"
+                required
+                [disabled]="isLoading">
+            </div>
+
+            <!-- New Password -->
+            <div class="mb-3">
+              <label for="newPassword" class="form-label fw-medium">New Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="newPassword"
+                name="newPassword"
+                [(ngModel)]="newPassword"
+                #newPasswordField="ngModel"
+                required
+                minlength="4"
+                [disabled]="isLoading">
+              <div class="form-text">Password must be at least 4 characters long.</div>
+            </div>
+
+            <!-- Confirm New Password -->
+            <div class="mb-3">
+              <label for="confirmPassword" class="form-label fw-medium">Confirm New Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="confirmPassword"
+                name="confirmPassword"
+                [(ngModel)]="confirmPassword"
+                #confirmPasswordField="ngModel"
+                required
+                [disabled]="isLoading">
+              <div class="invalid-feedback" *ngIf="newPassword && confirmPassword && newPassword !== confirmPassword">
+                Passwords do not match.
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="btn btn-primary"
+              [disabled]="!passwordForm.form.valid || isLoading || (newPassword !== confirmPassword && confirmPassword)">
+              <span *ngIf="isLoading" class="spinner-border spinner-border-sm me-2"></span>
+              {{ isLoading ? 'Changing...' : 'Change Password' }}
+            </button>
+          </form>
+
+          <!-- Message -->
+          <div *ngIf="message" [ngClass]="{'alert': true, 'alert-danger': isError, 'alert-success': !isError, 'mt-3 mb-0': true}">
+            {{ message }}
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
